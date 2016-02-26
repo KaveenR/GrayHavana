@@ -1,0 +1,386 @@
+/*1 fonts, importing fonts using google */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab|Droid+Sans|Droid+Serif);
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* 3d. negation pseudo classes, for not plain pages*/
+body:not(#plain) {
+    background-color : #FFFFFF;
+    height: 100%;
+    width: 100%;
+    margin : 0 auto;
+    background-image:url(https://farm1.staticflickr.com/546/20415788572_13b7b671f8_b.jpg);
+    background-repeat: no-repeat;
+    background-position : center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.bodyholder{
+    width:90%;
+    margin:0 auto;
+}
+
+@media only screen and (max-device-width: 480px){
+    .bodyholder{
+        width:100%;
+        margin:0 auto;
+    }
+}
+
+.container{
+    background-color:rgb(255,255,255);
+    padding:0px;
+    width:70%;
+    height:auto;
+    margin-bottom:10%;
+    float:left;
+}
+.single {
+    margin:0 auto;
+    float :none;
+}
+
+@media only screen and (max-device-width: 480px){
+    .container{
+        margin-bottom:0px;
+        float:none;
+    }
+}
+@media only screen and (max-device-width: 480px){
+    .container{
+        background-color:rgb(255,255,255);
+        margin : 0 auto;
+        width:100%;
+        height:auto;
+    }
+}
+
+aside {
+    background-color:rgb(255,255,255);
+    padding:0px;
+    width:25%;
+    height:auto;
+    float :left;
+    margin-left:30px;
+    margin-bottom: 30px;
+}
+
+
+@media only screen and (max-device-width: 480px){
+    aside {
+         float :none;
+         margin-left:0;
+         width:100%;
+         margin-bottom: 0px;
+    }
+}
+.heading {
+    font-family: 'Josefin Slab', serif;
+    text-align : center;
+    font-size : 250%;
+}
+
+.mainbody{
+    padding:60px;
+    height:100%;
+}
+
+@media only screen and (max-device-width: 480px){
+    .mainbody{
+        padding:15px;
+    }
+}
+
+/*1 fonts, use of imported fonts */
+/*2 shadows, using shadows */
+.mainbody h1,h2,h3,h4,h5{
+    font-family: 'Droid Serif', serif;
+    text-shadow: 2px 2px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.sidebar h1,h2,h3,h4,h5{
+    text-align:left;
+}
+.gray {
+  color:#D3D3D3;
+}
+
+/* 3b. Pseudo elements, makes forst letter bigger */
+.mainbody p{
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.mainbody p::first-letter{
+  font-size : 120%;
+}
+/* 3a. Attribute selector, for text alike inputs */
+/* 3e. border, put a border on the bottpm of the input*/
+input[type=text], input[type=email], textarea {
+    font-family: 'Droid Serif', serif;
+    border-left-style:none;
+    border-right-style:none;
+    border-top-style:none;
+    border-bottom-style:solid;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:100%;
+    padding: 5px;
+    outline: none;
+    resize: none;
+    border-bottom-width:medium;
+}
+/* 3a. Attribute selector, for submit buttons */
+buton,input[type=submit] {
+    font-family: 'Droid Serif', serif;
+    border-style:solid;
+    border-width:medium;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding: 15px;
+    outline: none;
+    background-color:rgb(255,255,255);
+    min-width:100px;
+    border-color:rgb(0,0,0);
+    font-size:100%;
+
+}
+/* 3a. Attribute selector, for submit buttons hover*/
+button,input[type=submit]:hover{
+    animation-name:morph;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/* 3a. Attribute selector, for text alike inputs hover*/
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    animation-name:morph;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* 3f. Gradient, light gradient*/
+header{
+    padding:60px;
+    background:linear-gradient(rgb(30,30,30),rgb(33,33,33));
+    color :rgb(255,255,255);
+    margin-bottom:35px;
+}
+
+@media only screen and (max-device-width: 480px){
+    header{
+        margin-bottom:0px;
+        padding:30px;
+        background-color:rgb(33,33,33);
+        color :rgb(255,255,255);
+    }
+}
+nav {
+    text-align : center;
+}
+
+nav ul{
+    list-style:none;
+    font-family: 'Droid Serif', serif;
+    margin : 0;
+    padding : 0;
+}
+
+nav ul li{
+    display : inline;
+    margin-left: 10px;
+}
+
+@media only screen and (max-device-width: 480px){
+    nav ul li{
+        display : block;
+        margin-left: 10px;
+        font-size:300%;
+    }
+}
+
+nav ul li a{
+    width:60px;
+    text-decoration:none;
+    color :rgb(255,255,255);
+}
+
+nav ul li a:hover{
+    opacity : 0.7;
+    animation-name:fade;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.footer{
+    border-top-style:solid;
+    border-top-width:medium;
+    border-top-color:rgb(0,0,0);
+    margin:15px;
+}
+
+.footer .content{
+    padding:5px;
+    text-align:center;
+}
+
+article{
+    animation-name:grow;
+    animation-duration: 1s;
+    text-align:justify;
+}
+
+/*Static Images*/
+
+.img-static{
+    max-width:100%;
+}
+
+.img-static:hover{
+    animation-name:imbo;
+    animation-duration: 1s;
+    transition:0.5s;
+    outline: thick solid rgb(255,255,255);
+    outline-offset: -15px;
+}
+
+/*Image Gallery*/
+
+.img-gal {
+    border-style:solid;
+    border-width:thin;
+    border-color:rgb(0,0,0);
+    margin:5px;
+    width:20%;
+    padding:10px;
+    height:auto;
+    outline :none;
+    float:left;
+    text-align:center;
+    font-family: 'Droid Sans', sans-serif;
+    color:rgb(0,0,0);
+    text-decoration:none;
+    font-size:80%;
+    color:rgb(33,33,33);
+    transform:rotate(0deg);
+    overflow:hidden;
+    background-color:rgb(250,250,250);
+}
+
+@media only screen and (max-device-width: 480px){
+    .img-gal {
+        width:auto;
+        float:none;
+    }
+}
+
+.img-gal img{
+    width:100%;
+    margin-bottom:5px;
+}
+
+.img-gal:hover{
+    transform:rotate(5deg);
+    transition:0.5s;
+}
+
+.img-gal-clear{
+    clear:left;
+}
+
+/*Home Page Image boxes*/
+
+.ibox{
+    background-size:cover;
+    background-position:center;
+    width : 100%;
+    overflow:hidden;
+    clear:left;
+}
+
+.ibox-left {
+    width:50%;
+    float:left;
+    clear:none;
+}
+.ibox-spacer{
+    margin-right:0px;
+}
+
+@media only screen and (max-device-width: 480px){
+    .ibox-left {
+        width :100%;
+        clear:none;
+    }
+}
+
+.iibox {
+    outline: thick solid rgb(255,255,255);
+    outline-offset: -15px;
+    background-color : rgba(0,0,0,0.4);
+    padding: 35px;
+    color : rgb(255,255,255);
+    text-align:center;
+    min-height : 305px;
+    transition:0.5s;
+}
+.ibox-link{
+    text-decoration:none;
+}
+.iibox:hover{
+        outline: thick solid rgb(255,255,255);
+        outline-offset: -20px;
+}
+
+.iibox-sep {
+    width:10%;
+    height:auto;
+    border-bottom-style:solid;
+    border-bottom-width:medium;
+    border-bottom-color:rgb(255,255,255);
+    margin : 0 auto;
+}
+
+/* Animattions */
+/* 3g. Animations, all animations in keyframe sequences*/
+@keyframes fade{
+    0% {
+        opacity : 1;
+    }
+
+    50% {
+        opacity : 0.5;
+    }
+
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes grow{
+    0% {
+        opacity : 0;
+        font-size: 0;
+    }
+
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes morph{
+    0% {
+        border-color:rgb(0,0,0);
+    }
+
+    50% {
+        border-color:red;
+    }
+
+    100% {
+        border-color:rgb(0,0,0);
+    }
+}
